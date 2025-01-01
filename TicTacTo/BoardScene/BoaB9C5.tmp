@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://rh5y7h5aa8dn"]
+
+[ext_resource type="Script" path="res://TicTacTo/BoardScene/BoardBehaviour.gd" id="1_1rwpk"]
+[ext_resource type="PackedScene" uid="uid://crm0mad1mwudp" path="res://TicTacTo/GridScene/GridSquare.tscn" id="2_wm2vu"]
+
+[node name="BoardScene" type="Node2D"]
+script = ExtResource("1_1rwpk")
+grid_pos_offset_x = 94
+grid_pos_offset_y = 94
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(479, 14)
+
+[node name="GridSquare" parent="Node2D" instance=ExtResource("2_wm2vu")]
+
+[node name="GridSquare2" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(94, 0)
+
+[node name="GridSquare3" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(188, 0)
+
+[node name="GridSquare4" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(0, 63)
+
+[node name="GridSquare5" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(63, 63)
+
+[node name="GridSquare6" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(126, 63)
+
+[node name="GridSquare7" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(0, 126)
+
+[node name="GridSquare8" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(63, 126)
+
+[node name="GridSquare9" parent="Node2D" instance=ExtResource("2_wm2vu")]
+position = Vector2(126, 126)
+
+[connection signal="grid_set" from="Node2D/GridSquare" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare2" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare3" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare4" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare5" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare6" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare7" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare8" to="." method="switch_player"]
+[connection signal="grid_set" from="Node2D/GridSquare9" to="." method="switch_player"]
